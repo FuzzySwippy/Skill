@@ -21,7 +21,9 @@
                 "publish",
                 "${workspaceFolder}/Skill.csproj",
                 "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary"
+                "/consoleloggerparameters:NoSummary",
+				"/p:DebugType=None",
+				"/p:DebugSymbols=false"
             ],
             "problemMatcher": "$msCompile"
         },

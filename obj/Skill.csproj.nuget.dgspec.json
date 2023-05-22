@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/slipper/Projects/SwippyToows/Skill/Skill.csproj": {}
+    "/home/slipper/Projects/Skill/Skill.csproj": {}
   },
   "projects": {
-    "/home/slipper/Projects/SwippyToows/Skill/Skill.csproj": {
+    "/home/slipper/Projects/Skill/Skill.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/slipper/Projects/SwippyToows/Skill/Skill.csproj",
-        "projectName": "Skill",
-        "projectPath": "/home/slipper/Projects/SwippyToows/Skill/Skill.csproj",
+        "projectUniqueName": "/home/slipper/Projects/Skill/Skill.csproj",
+        "projectName": "skill",
+        "projectPath": "/home/slipper/Projects/Skill/Skill.csproj",
         "packagesPath": "/home/slipper/.nuget/packages/",
-        "outputPath": "/home/slipper/Projects/SwippyToows/Skill/obj/",
+        "outputPath": "/home/slipper/Projects/Skill/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/home/slipper/.local/share/godot/mono/GodotNuGetFallbackFolder"
@@ -42,6 +42,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "System.Diagnostics.Process": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -53,12 +59,27 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
+              "version": "[7.0.5, 7.0.5]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.linux-x64",
+              "version": "[7.0.5, 7.0.5]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
           "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.302/RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
         }
       }
     }
