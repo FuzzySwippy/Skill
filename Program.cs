@@ -8,7 +8,7 @@ static class Program
 	{ 
 		if (args.Length < 2)
 		{
-			Console.WriteLine("Usage: skill <start delay> <process name> <process name> ...");
+			Console.WriteLine("Usage: skill <process name parts>...");
 			Environment.Exit(1);
 			return;
 		}
@@ -28,25 +28,15 @@ static class Program
 			return;
 		}
 
-		//Check if the first argument is a number
-		if (!int.TryParse(args[0], out int delay))
-		{
-			Console.WriteLine("The first argument must be a number specifying a delay in milliseconds.");
-			Environment.Exit(1);
-			return;
-		}
-
 		//ToLower all args
-		for (int i = 1; i < args.Length; i++)
+		for (int i = 0; i < args.Length; i++)
 			args[i] = args[i].ToLower();
 
-		KillProcesses(delay, args[1..]);
+		KillProcesses(args);
 	}
 
-	static void KillProcesses(int delay, string[] nameParts)
+	static void KillProcesses(string[] nameParts)
 	{
-		Thread.Sleep(delay);
-
 		Process[] processes = Process.GetProcesses();
 		int killed = 0;
 
