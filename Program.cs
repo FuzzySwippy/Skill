@@ -6,8 +6,9 @@ static class Program
 {
 	static void Main(string[] args)
 	{ 
-		if (args.Length < 2)
+		if (args.Length < 1)
 		{
+			Console.WriteLine("No arguments provided.");
 			Console.WriteLine("Usage: skill <process name parts>...");
 			Environment.Exit(1);
 			return;
