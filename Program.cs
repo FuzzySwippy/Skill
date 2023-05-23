@@ -22,12 +22,8 @@ static class Program
 			return;
 		}
 
-		if (Environment.GetEnvironmentVariable("USER") != "root")
-		{
-			Console.WriteLine("This program requires root privileges.");
-			Environment.Exit(1);
-			return;
-		}
+		if (Environment.GetEnvironmentVariable("USER") == "root")
+			Console.WriteLine("Running skill as root.");
 
 		//ToLower all args
 		for (int i = 0; i < args.Length; i++)
